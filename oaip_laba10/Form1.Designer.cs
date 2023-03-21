@@ -33,18 +33,18 @@
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.анализToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.статистикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonSort = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelNumberOfPermutations = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
-            this.статистикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelNumberOfPermutations = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -92,6 +92,12 @@
             this.анализToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.анализToolStripMenuItem.Text = "Анализ";
             // 
+            // статистикаToolStripMenuItem
+            // 
+            this.статистикаToolStripMenuItem.Name = "статистикаToolStripMenuItem";
+            this.статистикаToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.статистикаToolStripMenuItem.Text = "Статистика";
+            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
@@ -122,6 +128,7 @@
             this.buttonSort.TabIndex = 2;
             this.buttonSort.Text = "Начать сортировку";
             this.buttonSort.UseVisualStyleBackColor = false;
+            this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
             // 
             // radioButton2
             // 
@@ -159,42 +166,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Данные о сортировке";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Кол-во сравнений:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Кол-во перестановок:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Время сортировки:";
-            // 
-            // labelNumberOfPermutations
-            // 
-            this.labelNumberOfPermutations.AutoSize = true;
-            this.labelNumberOfPermutations.Location = new System.Drawing.Point(215, 101);
-            this.labelNumberOfPermutations.Name = "labelNumberOfPermutations";
-            this.labelNumberOfPermutations.Size = new System.Drawing.Size(17, 20);
-            this.labelNumberOfPermutations.TabIndex = 3;
-            this.labelNumberOfPermutations.Text = "0";
-            // 
             // buttonClear
             // 
             this.buttonClear.BackColor = System.Drawing.Color.Thistle;
@@ -205,11 +176,41 @@
             this.buttonClear.Text = "Очистка";
             this.buttonClear.UseVisualStyleBackColor = false;
             // 
-            // статистикаToolStripMenuItem
+            // labelNumberOfPermutations
             // 
-            this.статистикаToolStripMenuItem.Name = "статистикаToolStripMenuItem";
-            this.статистикаToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.статистикаToolStripMenuItem.Text = "Статистика";
+            this.labelNumberOfPermutations.AutoSize = true;
+            this.labelNumberOfPermutations.Location = new System.Drawing.Point(215, 101);
+            this.labelNumberOfPermutations.Name = "labelNumberOfPermutations";
+            this.labelNumberOfPermutations.Size = new System.Drawing.Size(17, 20);
+            this.labelNumberOfPermutations.TabIndex = 3;
+            this.labelNumberOfPermutations.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(29, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(143, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Время сортировки:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(162, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Кол-во перестановок:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Кол-во сравнений:";
             // 
             // Form1
             // 
