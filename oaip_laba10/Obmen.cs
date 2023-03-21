@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace oaip_laba10
 {
-    internal class Obmen
+    public class Obmen : IStrategy
     {
+       
     }
 }
