@@ -9,6 +9,7 @@ namespace oaip_laba10
 {
     public class IOFile
     {
+        public static Form1 form1 = new Form1();
         public static string content = "";
         public static void FillContent()
         {
@@ -28,5 +29,6 @@ namespace oaip_laba10
             content += "Перестановка " + Convert.ToString(first) + " и " + Convert.ToString(second) + '\n';
             return "Перестановка " + Convert.ToString(first) + " и " + Convert.ToString(second) + '\n';
         }
+       
     }
 }
