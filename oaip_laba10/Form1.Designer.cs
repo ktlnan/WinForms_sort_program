@@ -40,6 +40,8 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelTimeSort = new System.Windows.Forms.Label();
+            this.labelCountComparison = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
             this.labelNumberOfPermutations = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -69,20 +71,20 @@
             this.открытьToolStripMenuItem,
             this.сохранитьToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
-            this.файлToolStripMenuItem.Text = "Файл";
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.файлToolStripMenuItem.Text = "Данные";
             // 
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
             this.открытьToolStripMenuItem.Text = "Открыть";
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
-            this.сохранитьToolStripMenuItem.Text = "Сохранить";
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(246, 26);
+            this.сохранитьToolStripMenuItem.Text = "Сгенерировать набор";
             // 
             // анализToolStripMenuItem
             // 
@@ -154,6 +156,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.labelTimeSort);
+            this.groupBox2.Controls.Add(this.labelCountComparison);
             this.groupBox2.Controls.Add(this.buttonClear);
             this.groupBox2.Controls.Add(this.labelNumberOfPermutations);
             this.groupBox2.Controls.Add(this.label3);
@@ -165,6 +169,24 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Данные о сортировке";
+            // 
+            // labelTimeSort
+            // 
+            this.labelTimeSort.AutoSize = true;
+            this.labelTimeSort.Location = new System.Drawing.Point(215, 143);
+            this.labelTimeSort.Name = "labelTimeSort";
+            this.labelTimeSort.Size = new System.Drawing.Size(17, 20);
+            this.labelTimeSort.TabIndex = 6;
+            this.labelTimeSort.Text = "0";
+            // 
+            // labelCountComparison
+            // 
+            this.labelCountComparison.AutoSize = true;
+            this.labelCountComparison.Location = new System.Drawing.Point(215, 50);
+            this.labelCountComparison.Name = "labelCountComparison";
+            this.labelCountComparison.Size = new System.Drawing.Size(17, 20);
+            this.labelCountComparison.TabIndex = 5;
+            this.labelCountComparison.Text = "0";
             // 
             // buttonClear
             // 
@@ -237,23 +259,26 @@
         }
 
         #endregion
-
+        public System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        public System.Windows.Forms.OpenFileDialog openFileDialog1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem файлToolStripMenuItem;
         private ToolStripMenuItem открытьToolStripMenuItem;
         private ToolStripMenuItem сохранитьToolStripMenuItem;
         private ToolStripMenuItem анализToolStripMenuItem;
-        private ListBox listBox1;
+        public ListBox listBox1;
         private GroupBox groupBox1;
         private Button buttonSort;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
         private GroupBox groupBox2;
         private Button buttonClear;
-        private Label labelNumberOfPermutations;
+        public Label labelNumberOfPermutations;
         private Label label3;
         private Label label2;
         private Label label1;
         private ToolStripMenuItem статистикаToolStripMenuItem;
+        public Label labelTimeSort;
+        public Label labelCountComparison;
     }
 }

@@ -51,6 +51,7 @@
             this.buttonSort.TabIndex = 1;
             this.buttonSort.Text = "Начать";
             this.buttonSort.UseVisualStyleBackColor = true;
+            this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
             // 
             // Analysis
             // 

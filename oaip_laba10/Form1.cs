@@ -24,10 +24,33 @@ namespace oaip_laba10
             }
             count++;
         }
+        //сортировка
         private void buttonSort_Click(object sender, EventArgs e)
         {
-
+            if (Context.array != null)
+            {
+                if (radioButton1.Checked == true)
+                {
+                    this.context = new Context(new Obmen());
+                    context.ExecuteAlgorithm();
+                    this.AddItemsListBox();
+                    //IOFile.SaveData();
+                    buttonSort.Enabled = false;
+                }
+            //    if (radioButton2.Checked == true)
+            //    {
+            //        this.context = new Context(new QuickSort());
+            //        context.ExecuteAlgorithm();
+            //        this.AddItemsListBox();
+            //        IOFile.SaveData();
+            //        buttonSort.Enabled = false;
+            //    }
+            //    IOFile.content = "";
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Ошибка! Массив пуст, сортировка невозможна!");
+            }
         }
-
     }
 }
