@@ -30,11 +30,13 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonSort = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(28, 22);
             this.dataGridView1.Name = "dataGridView1";
@@ -45,18 +47,20 @@
             // 
             // buttonSort
             // 
+            this.buttonSort.BackColor = System.Drawing.Color.Pink;
             this.buttonSort.Location = new System.Drawing.Point(326, 375);
             this.buttonSort.Name = "buttonSort";
             this.buttonSort.Size = new System.Drawing.Size(187, 53);
             this.buttonSort.TabIndex = 1;
             this.buttonSort.Text = "Начать";
-            this.buttonSort.UseVisualStyleBackColor = true;
+            this.buttonSort.UseVisualStyleBackColor = false;
             this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
             // 
             // Analysis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonSort);
             this.Controls.Add(this.dataGridView1);
@@ -71,5 +75,6 @@
 
         private DataGridView dataGridView1;
         private Button buttonSort;
+        private SaveFileDialog saveFileDialog1;
     }
 }

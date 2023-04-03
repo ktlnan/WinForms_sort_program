@@ -37,7 +37,7 @@
             // 
             // buttonCreateArray
             // 
-            this.buttonCreateArray.BackColor = System.Drawing.Color.Thistle;
+            this.buttonCreateArray.BackColor = System.Drawing.Color.SlateBlue;
             this.buttonCreateArray.Location = new System.Drawing.Point(242, 158);
             this.buttonCreateArray.Name = "buttonCreateArray";
             this.buttonCreateArray.Size = new System.Drawing.Size(182, 52);
@@ -72,7 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Pink;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(459, 265);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
