@@ -57,22 +57,42 @@ namespace oaip_laba10
 
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)  // Генерация
         {
+            if (Context.array == null)
+            {
+                SetGenerator setGenerator = new SetGenerator();
+                SetGenerator.form1 = this;
+                setGenerator.Show();
 
+                buttonSort.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Ошибка! Массив уже сгенерирован. Необходимо очистить старый набор и повторите попытку!");
+            }
         }
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)  // Открытие файла
         {
-
+            IOFile.LoadData();
         }
 
         private void статистикаToolStripMenuItem_Click(object sender, EventArgs e) // Происходит вывод статистики
         {
-
+           Analysis comparativeAnalysis = new Analysis();
+            comparativeAnalysis.Show();
         }
 
         private void buttonClear_Click(object sender, EventArgs e) //кнопка очистки
         {
-
+            buttonSort.Enabled = true; // включить кнопку "Сортировать"
+            listBox1.Items.Clear(); // очистить список элементов
+            labelCountComparison.Text = ""; // очистить метку сравнений
+            labelTimeSort.Text = ""; // очистить метку времени сортировки
+            labelNumberOfPermutations.Text = ""; // очистить метку количества перестановок
+            Analysis.NumberOfPermutations = 0; // сбросить количество перестановок
+            Analysis.Comparison = 0; // сбросить количество сравнений
+            Context.array = null;
+            this.count = 0; // сбросить счетчик
         }
     }
 }
