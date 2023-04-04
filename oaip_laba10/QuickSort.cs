@@ -99,18 +99,23 @@ namespace oaip_laba10
         public int[] Algorithm(int[] mas, bool flag = true) // Метод, реализующий алгоритм быстрой сортировки
         { // Если флаг true, то используется метод SortAnalysisFlag с добавлением информации в файл и ListBox
             if (flag)
-            {
+            { // Заполнение содержимого файла
                 IOFile.FillContent();
+                // Создание объекта для измерения времени выполнения кода
                 System.Diagnostics.Stopwatch myStopwatch = new System.Diagnostics.Stopwatch();
                 myStopwatch.Start();
+                // Вызов метода сортировки с флагом
                 SortAnalysisFlag(mas, 0, mas.Length - 1);
+                // Остановка измерения времени выполнения кода и получение результата
                 myStopwatch.Stop();
                 var resultTime = myStopwatch.Elapsed;
+                // Форматирование времени выполнения кода в строку
                 string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:000}",
                     resultTime.Hours,
                     resultTime.Minutes,
                     resultTime.Seconds,
                     resultTime.Milliseconds);
+                // Установка значений элементов на форме
                 form1.labelCountComparison.Text = Convert.ToString(Analysis.Comparison);
                 form1.labelNumberOfPermutations.Text = Convert.ToString(Analysis.NumberOfPermutations);
                 form1.labelTimeSort.Text = elapsedTime;
@@ -121,16 +126,20 @@ namespace oaip_laba10
             {
                 System.Diagnostics.Stopwatch myStopwatch = new System.Diagnostics.Stopwatch();
                 myStopwatch.Start();
+                // Вызов метода обычной сортировки
                 SortAnalysis(mas, 0, mas.Length - 1);
                 myStopwatch.Stop();
                 var resultTime = myStopwatch.Elapsed;
+                // Форматирование времени выполнения кода в строку
                 string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:000}",
                     resultTime.Hours,
                     resultTime.Minutes,
                     resultTime.Seconds,
                     resultTime.Milliseconds);
-                    Analysis.timeSort = resultTime.Seconds * 1000 + resultTime.Milliseconds;
+                // Установка значений элементов на форме
+                Analysis.timeSort = resultTime.Seconds * 1000 + resultTime.Milliseconds;
                     Analysis.elapsedTime = elapsedTime;
+                // Возвращаем отсортированный массив
                 return mas;
             }
         }
