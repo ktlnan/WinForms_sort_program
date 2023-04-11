@@ -96,6 +96,12 @@ namespace oaip_laba10
             Sort(10000, 3);
 
             sortingResults.Clear();
+            dataGridView1.AutoResizeColumns();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

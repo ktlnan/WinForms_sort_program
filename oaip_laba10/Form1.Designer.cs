@@ -179,7 +179,7 @@
             // labelTimeSort
             // 
             this.labelTimeSort.AutoSize = true;
-            this.labelTimeSort.Location = new System.Drawing.Point(215, 143);
+            this.labelTimeSort.Location = new System.Drawing.Point(216, 143);
             this.labelTimeSort.Name = "labelTimeSort";
             this.labelTimeSort.Size = new System.Drawing.Size(17, 20);
             this.labelTimeSort.TabIndex = 6;
@@ -208,7 +208,7 @@
             // labelNumberOfPermutations
             // 
             this.labelNumberOfPermutations.AutoSize = true;
-            this.labelNumberOfPermutations.Location = new System.Drawing.Point(215, 101);
+            this.labelNumberOfPermutations.Location = new System.Drawing.Point(216, 96);
             this.labelNumberOfPermutations.Name = "labelNumberOfPermutations";
             this.labelNumberOfPermutations.Size = new System.Drawing.Size(17, 20);
             this.labelNumberOfPermutations.TabIndex = 3;
@@ -226,7 +226,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 101);
+            this.label2.Location = new System.Drawing.Point(30, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 20);
             this.label2.TabIndex = 1;

@@ -39,7 +39,7 @@
             // buttonCreateArray
             // 
             this.buttonCreateArray.BackColor = System.Drawing.Color.SlateBlue;
-            this.buttonCreateArray.Location = new System.Drawing.Point(242, 158);
+            this.buttonCreateArray.Location = new System.Drawing.Point(140, 195);
             this.buttonCreateArray.Name = "buttonCreateArray";
             this.buttonCreateArray.Size = new System.Drawing.Size(182, 52);
             this.buttonCreateArray.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(30, 80);
+            this.trackBar1.Location = new System.Drawing.Point(29, 45);
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(411, 56);
             this.trackBar1.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // textBoxCountElements
             // 
-            this.textBoxCountElements.Location = new System.Drawing.Point(30, 171);
+            this.textBoxCountElements.Location = new System.Drawing.Point(164, 146);
             this.textBoxCountElements.Name = "textBoxCountElements";
             this.textBoxCountElements.Size = new System.Drawing.Size(136, 27);
             this.textBoxCountElements.TabIndex = 2;
@@ -66,7 +66,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(102, 34);
+            this.label1.Location = new System.Drawing.Point(102, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(243, 20);
             this.label1.TabIndex = 3;
@@ -75,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 227);
+            this.label2.Location = new System.Drawing.Point(93, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 4;
@@ -85,7 +85,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(451, 248);
+            this.ClientSize = new System.Drawing.Size(465, 273);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxCountElements);
@@ -93,6 +93,7 @@
             this.Controls.Add(this.buttonCreateArray);
             this.Name = "SetGenerator";
             this.Text = "Генератор массива";
+            this.Load += new System.EventHandler(this.SetGenerator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

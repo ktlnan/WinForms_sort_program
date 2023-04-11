@@ -19,7 +19,31 @@ namespace oaip_laba10
             InitializeComponent();
             label2.Text = "";
         }
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            textBoxCountElements.Text = Convert.ToString(trackBar1.Value); // Отображаем значение трекбара в текстовом поле
+        }
 
+        private void textBoxCountElements_TextChanged(object sender, EventArgs e)
+        {
+            int flag = 0;
+            if (!(int.TryParse(textBoxCountElements.Text, out flag)))
+            {
+                label2.Text = "Ошибка! Введенно некорректное значение!!";
+                this.Height = 240; // закрывается до таких размеров, когда ввели буквы
+            }
+            else if (!(int.Parse(textBoxCountElements.Text) > trackBar1.Maximum))
+            { // Если введенное значение меньше или равно максимальному значению трекбара, обновляем значение трекбара и скрываем сообщение об ошибке
+                label2.Text = "";
+                this.Height = 320; // нормальный ввод цифр 1-10
+                trackBar1.Value = int.Parse(textBoxCountElements.Text);
+            }
+            else if ((int.Parse(textBoxCountElements.Text) > trackBar1.Maximum) || (int.Parse(textBoxCountElements.Text) < trackBar1.Minimum))
+                {
+                    label2.Text = "Ошибка! Введенное значение вышло \nза допустимый интервал!!";
+                    this.Height = 240; //  закрывается до таких размеров, когда ввели больше положенного
+            }
+            }
         private void buttonCreateArray_Click(object sender, EventArgs e)
         {
             Context.array = new int[trackBar1.Value]; // Создаем массив нужной длины и заполняем его случайными числами
@@ -38,30 +62,9 @@ namespace oaip_laba10
             this.Close(); // Закрываем форму SetGenerator
         }
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
+        private void SetGenerator_Load(object sender, EventArgs e)
         {
-            textBoxCountElements.Text = Convert.ToString(trackBar1.Value); // Отображаем значение трекбара в текстовом поле
-        }
 
-        private void textBoxCountElements_TextChanged(object sender, EventArgs e)
-        {
-            int flag = 0;
-            if (!(int.TryParse(textBoxCountElements.Text, out flag)))
-            {
-                label2.Text = "Ошибка! Введенно некорректное значение!!";
-                this.Height = 200;
-            }
-            else if (!(int.Parse(textBoxCountElements.Text) > trackBar1.Maximum))
-            { // Если введенное значение меньше или равно максимальному значению трекбара, обновляем значение трекбара и скрываем сообщение об ошибке
-                label2.Text = "";
-                this.Height = 175;
-                trackBar1.Value = int.Parse(textBoxCountElements.Text);
-            }
-            else if ((int.Parse(textBoxCountElements.Text) > trackBar1.Maximum) || (int.Parse(textBoxCountElements.Text) < trackBar1.Minimum))
-            {
-                label2.Text = "Ошибка! Введенное значение вышло \nза допустимый интервал!!";
-                this.Height = 200;
-            }
         }
     }
 }

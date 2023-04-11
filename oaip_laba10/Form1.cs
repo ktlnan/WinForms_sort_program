@@ -9,6 +9,9 @@ namespace oaip_laba10
             InitializeComponent();
             saveFileDialog2.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*"; // устанавливаем фильтр для диалога сохранения файла для выбора только текстовых файлов
             openFileDialog2.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*"; // устанавливаем фильтр для диалога открытия файла для выбора только текстовых файлов
+            IOFile.form1 = this;
+            QuickSort.form1 = this;
+            Obmen.form1 = this;
         }
         public void AddItemsListBox(int first = -1, int second = -1)
         {
@@ -36,7 +39,7 @@ namespace oaip_laba10
                     this.context = new Context(new Obmen());
                     context.ExecuteAlgorithm();
                     this.AddItemsListBox();
-                    //IOFile.SaveData();
+                    IOFile.SaveData();
                     buttonSort.Enabled = false;
                 }
                 if (radioButton2.Checked == true)
